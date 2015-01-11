@@ -38,7 +38,7 @@ static UIAlertView *alert;
 }
 
 // This information can also be stored in a .plist; it's mostly personal preference.
-// I think they minimize extraneous directory's
+// I think it minimizes extraneous directory's
 - (NSString *)activator:(LAActivator *)activator requiresLocalizedTitleForListenerName:(NSString *)listenerName {
     return @"Edit Pasteboard";
 }
