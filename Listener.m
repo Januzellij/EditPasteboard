@@ -19,9 +19,10 @@ static UIAlertView *alert;
 
 // Use a UIAlertView because we have *no* idea what view controller's will be active/visible
 - (void)activator:(LAActivator *)activator receiveEvent:(LAEvent *)event {
-    alert = [[UIAlertView alloc] initWithTitle:@"EditPasteboard" message:nil delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Done", nil];
+    NSString *pasteboardText = [UIPasteboard generalPasteboard].string;
+    alert = [[UIAlertView alloc] initWithTitle:@"EditPasteboard" message:pasteboardText delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Done", nil];
     alert.alertViewStyle = UIAlertViewStylePlainTextInput;
-    [alert textFieldAtIndex:0].text = [UIPasteboard generalPasteboard].string;
+    [alert textFieldAtIndex:0].text = pasteboardText;
     [alert show];
     
     event.handled = YES;

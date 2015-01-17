@@ -1,7 +1,7 @@
 Package: com.jakej.editpasteboard
 Name: EditPasteboard
 Depends: mobilesubstrate, libactivator
-Version: 1.0
+Version: 1.1
 Architecture: iphoneos-arm
 Description: Edit your pasteboard on the fly, or just take a peek.
 Maintainer: Jake Januzelli
